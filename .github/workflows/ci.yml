@@ -62,7 +62,9 @@ jobs:
             git config --global core.autocrlf true
         - uses: actions/checkout@v3
         - name: Check Git Config
-          run: git config --list --local
+          run: |
+            git config core.autocrlf true
+            git config --list --local
         - name: Run Tests
           run: swift test
 
