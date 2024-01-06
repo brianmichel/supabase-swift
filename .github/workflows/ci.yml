@@ -65,6 +65,7 @@ jobs:
           run: |
             git config core.autocrlf true
             git config --list --local
+            git ls-files .\Tests\AuthTests\__Snapshots__\RequestsTests\ --eol
         - name: Run Tests
           run: swift test
 
