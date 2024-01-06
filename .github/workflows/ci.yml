@@ -59,7 +59,7 @@ jobs:
             github-token: ${{ secrets.GITHUB_TOKEN }}
         - name: Enable line ending conversion
           run: |
-            git config --global core.autocrlf true
+            git config --local core.autocrlf true
         - uses: actions/checkout@v3
         - name: Run Tests
           run: swift test
