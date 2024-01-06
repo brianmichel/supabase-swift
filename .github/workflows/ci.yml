@@ -63,7 +63,7 @@ jobs:
         - uses: actions/checkout@v3
         - name: Check Git Config
           run: |
-            git config core.autocrlf true
+            git config core.autocrlf false
             git config --list --local
             git ls-files .\Tests\AuthTests\__Snapshots__\RequestsTests\ --eol
         - name: Run Tests
