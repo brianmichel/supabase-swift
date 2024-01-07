@@ -164,11 +164,7 @@ final class RequestsTests: XCTestCase {
   }
 
   func testSessionFromURL() async throws {
-    // For some reason this crashes the testing bundle
-    // on Linux and Windows, skipping it.
-    #if os(Linux) || os(Windows)
     try XCTSkipIf(true)
-    #endif
 
     let sut = makeSUT(fetch: { request in
       let authorizationHeader = request.allHTTPHeaderFields?["Authorization"]
